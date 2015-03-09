@@ -9,12 +9,19 @@ static TextLayer *s_time_layer;
 //Text Layer
 static TextLayer *s_text_layer;
 
+//Weather Layer
+static TextLayer *s_weather;
+
+
 //Hour Font
 static GFont s_hour_font;
 
 //Minute Font
 static GFont s_min_font;
 
+//Weather Font
+
+static GFont s_weather_font;
 
 static void update_time(){
 	//Set time structure
@@ -71,6 +78,18 @@ static void main_window_load(Window *window){
 
 	layer_add_child(window_get_root_layer(window), text_layer_get_layer(s_text_layer));
 
+	//Weather Layer
+
+	s_weather = text_layer_create(GRect(0,140,144,25));
+	text_layer_set_background_color(s_weather, GColorWhite);
+	text_layer_set_text_color(s_weather, GColorBlack);
+	text_layer_set_text_alignment(s_weather, GTextAlignmentCenter);
+
+	text_layer_set_text(s_weather, "loading...");
+
+	s_weather_font = fonts_load_custom_font(resource_get_handle(RESOURCE_ID_FONT_LATO_20));
+	text_layer_set_font(s_weather, s_weather_font);
+	layer_add_child(window_get_root_layer(window), text_layer_get_layer(s_weather));
 }
 
 static void main_window_unload(Window *window){

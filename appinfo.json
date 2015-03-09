@@ -1,4 +1,4 @@
-{
+{	
   "uuid": "cfe2203e-bc03-400e-8e08-043ed3706e4d",
   "shortName": "tutorial1",
   "longName": "tutorial1",
@@ -23,6 +23,12 @@
 		"type":"font",
 		"name": "FONT_LATO_BOLD_52",
 		"file": "fonts/Lato/Lato-Bold.ttf",
+		"compatibility": "2.7"
+		},
+		{
+		"type": "font",
+		"name": "FONT_LATO_20",
+		"file": "fonts/Lato/Lato-Regular.ttf",
 		"compatibility": "2.7"
 		}
 	]
