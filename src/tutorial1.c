@@ -9,8 +9,12 @@ static TextLayer *s_time_layer;
 //Text Layer
 static TextLayer *s_text_layer;
 
-//Custom Text
-static GFont s_font;
+//Hour Font
+static GFont s_hour_font;
+
+//Minute Font
+static GFont s_min_font;
+
 
 static void update_time(){
 	//Set time structure
@@ -40,28 +44,28 @@ static void update_time(){
 static void main_window_load(Window *window){
 
 	//Load Font
-	s_font = fonts_load_custom_font(resource_get_handle(RESOURCE_ID_FONT_LATO_BOLD_48));
+	s_hour_font = fonts_load_custom_font(resource_get_handle(RESOURCE_ID_FONT_LATO_BOLD_52));
+	s_min_font = fonts_load_custom_font(resource_get_handle(RESOURCE_ID_FONT_LATO_48));
 
-	//Create Time Layer
+	//Create Minute  Layer
 	s_time_layer = text_layer_create(GRect(0, 75, 144, 50));
 	text_layer_set_background_color(s_time_layer, GColorClear);
 	text_layer_set_text_color(s_time_layer, GColorBlack);
 
 	//Make things like a watch
-	text_layer_set_font(s_time_layer, s_font);
+	text_layer_set_font(s_time_layer, s_min_font);
 	text_layer_set_text_alignment(s_time_layer, GTextAlignmentCenter);
 
-	//Add layer
+	//Add Hour layer
 	layer_add_child(window_get_root_layer(window), text_layer_get_layer(s_time_layer));
 
 	//text layer
 	s_text_layer = text_layer_create(GRect(0,10,144,70));
-	text_layer_set_background_color(s_text_layer, GColorBlack);
-	text_layer_set_text_color(s_text_layer, GColorWhite);
-	text_layer_set_text(s_text_layer, "Hello!");
+	text_layer_set_background_color(s_text_layer, GColorWhite);
+	text_layer_set_text_color(s_text_layer, GColorBlack);
 	
 	//Set text layer parameters
-	text_layer_set_font(s_text_layer, s_font);
+	text_layer_set_font(s_text_layer, s_hour_font);
 	text_layer_set_text_alignment(s_text_layer, GTextAlignmentCenter);	
 
 
