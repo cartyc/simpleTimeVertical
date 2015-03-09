@@ -1,0 +1,17 @@
+{
+  "uuid": "cfe2203e-bc03-400e-8e08-043ed3706e4d",
+  "shortName": "tutorial1",
+  "longName": "tutorial1",
+  "companyName": "cartyco",
+  "versionCode": 1,
+  "versionLabel": "1.0",
+  "watchapp": {
+    "watchface": true
+  },
+  "appKeys": {
+    "dummy": 0
+  },
+  "resources": {
+    "media": []
+  }
+}
