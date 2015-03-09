@@ -9,6 +9,9 @@ static TextLayer *s_time_layer;
 //Text Layer
 static TextLayer *s_text_layer;
 
+//Custom Text
+static GFont s_font;
+
 static void update_time(){
 	//Set time structure
 	time_t temp = time(NULL);
@@ -36,13 +39,16 @@ static void update_time(){
 //Load and unload the windows
 static void main_window_load(Window *window){
 
+	//Load Font
+	s_font = fonts_load_custom_font(resource_get_handle(RESOURCE_ID_FONT_LATO_BOLD_48));
+
 	//Create Time Layer
 	s_time_layer = text_layer_create(GRect(0, 75, 144, 50));
 	text_layer_set_background_color(s_time_layer, GColorClear);
 	text_layer_set_text_color(s_time_layer, GColorBlack);
 
 	//Make things like a watch
-	text_layer_set_font(s_time_layer, fonts_get_system_font(FONT_KEY_BITHAM_42_BOLD));
+	text_layer_set_font(s_time_layer, s_font);
 	text_layer_set_text_alignment(s_time_layer, GTextAlignmentCenter);
 
 	//Add layer
@@ -55,7 +61,7 @@ static void main_window_load(Window *window){
 	text_layer_set_text(s_text_layer, "Hello!");
 	
 	//Set text layer parameters
-	text_layer_set_font(s_text_layer, fonts_get_system_font(FONT_KEY_BITHAM_42_BOLD));
+	text_layer_set_font(s_text_layer, s_font);
 	text_layer_set_text_alignment(s_text_layer, GTextAlignmentCenter);	
 
 

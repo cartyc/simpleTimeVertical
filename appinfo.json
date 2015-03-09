@@ -12,6 +12,13 @@
     "dummy": 0
   },
   "resources": {
-    "media": []
+    "media": [
+		{
+		"type": "font",
+		"name": "FONT_LATO_BOLD_48",
+		"file": "fonts/Lato-Bold.ttf",
+		"compatibility": "2.7"
+		}
+	]
   }
 }
