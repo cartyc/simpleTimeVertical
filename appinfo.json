@@ -1,7 +1,7 @@
 {	
   "uuid": "cfe2203e-bc03-400e-8e08-043ed3706e4d",
-  "shortName": "tutorial1",
-  "longName": "tutorial1",
+  "shortName": "SimpleTime",
+  "longName": "SimeTime_vertical",
   "companyName": "cartyco",
   "versionCode": 1,
   "versionLabel": "1.0",
@@ -15,13 +15,13 @@
     "media": [
 		{
 		"type": "font",
-		"name": "FONT_LATO_48",
+		"name": "FONT_LATO_52",
 		"file": "fonts/Lato/Lato-Regular.ttf",
 		"compatibility": "2.7"
 		},
 		{
 		"type":"font",
-		"name": "FONT_LATO_BOLD_52",
+		"name": "FONT_LATO_BOLD_58",
 		"file": "fonts/Lato/Lato-Bold.ttf",
 		"compatibility": "2.7"
 		},
