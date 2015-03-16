@@ -10,10 +10,13 @@ var xhrRequest = function(url, type, callback){
 function locationSuccess(pos){
   
   //We will request the weather here
-  var url = "http://api.openweathermap.org/data/2.5/weather?lat=45.41&lon=-75.7";
+  // var url = "http://api.openweathermap.org/data/2.5/weather?lat=45.41&lon=-75.7";
+  var url = "http://api.openweathermap.org/data/2.5/weather?lat=" + pos.coords.latitude + "&lon=" + pos.coords.longitude;
   console.log("Before request");
+  console.log(url);
   //send request
-  xhrRequest(url, 'GET', 
+
+     xhrRequest(url, 'GET', 
             function(responseText){
               var json = JSON.parse(responseText);
               
@@ -38,15 +41,21 @@ function locationSuccess(pos){
                        console.log("Error sending weather info to Pebble!");
                      });
             });
+  
+
 }
 
 function locationError(err){
-  console.log("Error requesting location!");
+  console.log("Error requesting location via api!");
+  console.log("Check manually");
 }
 
 function getWeather(){
   console.log("getting weather");
-  locationSuccess();
+  navigator.geolocation.getCurrentPosition(
+    locationSuccess,
+    locationError,
+    {timeout: 20000, maximumAge: 60000});
 }
 
 

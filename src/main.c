@@ -44,6 +44,28 @@ static void update_time(){
 	text_layer_set_text(s_hour, hourBuffer);
 }
 
+
+//Set Text Layer styles
+static void setLayer( TextLayer *layer, const char * fontColor, const char * backgroundColor) {
+	const char * clear = "clear";
+	const char * black = "black";
+
+	//Set the background color
+	if ( backgroundColor == clear){
+		text_layer_set_background_color(layer, GColorClear);
+	} else if ( backgroundColor == black){
+		text_layer_set_background_color(layer, GColorBlack);
+	};
+	
+	//Set The font color
+	if ( fontColor == black){
+		text_layer_set_text_color(layer, GColorBlack);
+	} else if ( fontColor == clear){
+		text_layer_set_text_color(layer, GColorClear);
+	};
+
+}
+
 //Load and unload the windows
 static void main_window_load(Window *window){
 
@@ -54,8 +76,9 @@ static void main_window_load(Window *window){
 
 	//Create Minute  Layer
 	s_minute = text_layer_create(GRect(0, 75, 144, 60));
-	text_layer_set_background_color(s_minute, GColorClear);
-	text_layer_set_text_color(s_minute, GColorBlack);
+
+	//Set Layer design
+	setLayer(s_minute, "black", "clear");
 
 	//Make things like a watch
 	text_layer_set_font(s_minute, s_min_font);
@@ -66,8 +89,7 @@ static void main_window_load(Window *window){
 
 	//Create Hour layer
 	s_hour = text_layer_create(GRect(0,10,144,70));
-	text_layer_set_background_color(s_hour, GColorWhite);
-	text_layer_set_text_color(s_hour, GColorBlack);
+	setLayer(s_hour, "clear", "black");
 	
 	//Set minute layer parameters
 	text_layer_set_font(s_hour, s_hour_font);
@@ -76,9 +98,9 @@ static void main_window_load(Window *window){
 	layer_add_child(window_get_root_layer(window), text_layer_get_layer(s_hour));
 
 	//Weather Layer
-	s_weather = text_layer_create(GRect(0,150,144,15));
-	text_layer_set_background_color(s_weather, GColorWhite);
-	text_layer_set_text_color(s_weather, GColorBlack);
+	s_weather = text_layer_create(GRect(0,140,144,40));
+	setLayer(s_weather, "clear", "black");
+
 
 	text_layer_set_font(s_weather, s_weather_font);
 	text_layer_set_text_alignment(s_weather, GTextAlignmentCenter);
@@ -106,7 +128,7 @@ static void main_window_unload(Window *window){
 
 
 //tick timer
-static void tick_handler(struct tm * tick_time, TimeUnits units_changed){
+static void tick_handler(struct tm *tick_time, TimeUnits units_changed){
 	update_time();
 
 	//set Weather Every 15 mins
