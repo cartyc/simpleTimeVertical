@@ -112,10 +112,14 @@ function locationError(err){
 }
 
 
+//////////////////////////////////////////////////////////////////////
+//                                                                  //
+//Attempt to get Device Co-Ords off of device.                      //
+//If error log it and attempt to get Data from pre-coded url        //
+//Needs a companion bit on pebble for user to select city or co-ords//
+//                                                                  //
+//////////////////////////////////////////////////////////////////////
 function getWeather(){
-  //Attempt to get Device Co-Ords off of device.
-  //If error log it and attempt to get Data from pre-coded url
-  //Needs a companion bit on pebble for user to select city or co-ords
   console.log("getting weather");
   navigator.geolocation.getCurrentPosition(
     getWeatherDevice,
