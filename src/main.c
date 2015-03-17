@@ -105,7 +105,7 @@ static void main_window_load(Window *window){
 	/////////////////////
 	s_hour = text_layer_create(GRect(0,10,144,70));
 	//Set the Layer parameters
-	setLayer(s_hour, "clear", "black", s_hour_font);
+	setLayer(s_hour, "black", "clear", s_hour_font);
 	//Set minute layer parameters
 	text_layer_set_text_alignment(s_hour, GTextAlignmentCenter);
 	//add layer

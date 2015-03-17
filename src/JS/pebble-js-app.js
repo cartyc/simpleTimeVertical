@@ -108,7 +108,7 @@ function locationError(err){
   console.log("Error requesting location via api!");
   console.log("Check manually");
   //If there was an error just get the data the good old fashioned way
-  getWeather_Local();
+  getWeatherLocal();
 }
 
 
@@ -124,7 +124,7 @@ function getWeather(){
   navigator.geolocation.getCurrentPosition(
     getWeatherDevice,
     locationError,
-    {timeout: 20000, maximumAge: 60000});
+    {timeout: 10000, maximumAge: 60000});
 }
 
 
@@ -133,7 +133,7 @@ function getWeather(){
 //Listen for when the watchface is opened
 Pebble.addEventListener('ready',
                         function(e){
-                          console.log("PebbleKit JS ready!");
+                          console.log("Ready for action!");
                         
                          getWeather();
                        }
