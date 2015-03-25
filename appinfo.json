@@ -2,7 +2,7 @@
   "uuid": "cfe2203e-bc03-400e-8e08-043ed3706e4d",
   "shortName": "SimpleTime",
   "longName": "SimeTime_vertical",
-  "companyName": "cartyco",
+  "companyName": "Chris Carty",
   "versionCode": 1,
   "versionLabel": "1.0",
   "watchapp": {
@@ -31,6 +31,12 @@
 		"name": "FONT_LATO_20",
 		"file": "fonts/Lato/Lato-Regular.ttf",
 		"compatibility": "2.7"
+		},
+		{
+			"menuIcon" : true,
+			"type" : "png",
+			"name" : "IMAGE_MENU_ICON",
+			"file" : "images/menu_icon.png"
 		}
 	]
   },
