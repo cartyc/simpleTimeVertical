@@ -1,0 +1,535 @@
+{
+	"auto_complete":
+	{
+		"selected_items":
+		[
+			[
+				"ma",
+				"mainAppraisal"
+			],
+			[
+				"id_",
+				"id_order"
+			],
+			[
+				"subj",
+				"subjectProperty"
+			],
+			[
+				"contact",
+				"contactTypes"
+			],
+			[
+				"Fo",
+				"ForeignKey"
+			],
+			[
+				"For",
+				"For"
+			],
+			[
+				"for",
+				"ForeignKey"
+			],
+			[
+				"IS",
+				"IS_CONDO"
+			],
+			[
+				"is",
+				"IS_FORMERGROWHOUSE"
+			],
+			[
+				"lat",
+				"lat"
+			],
+			[
+				"lotDepth",
+				"lotDepthSQFT"
+			],
+			[
+				"lotf",
+				"lotFrontageACRE"
+			],
+			[
+				"proper",
+				"propertyType"
+			],
+			[
+				"app",
+				"appraisalFormBase"
+			],
+			[
+				"neigh",
+				"neighbourhood"
+			],
+			[
+				"subject",
+				"Subject"
+			],
+			[
+				"neighbourhood_",
+				"neighbourhood_ConformitySize"
+			],
+			[
+				"Ch",
+				"CharField"
+			],
+			[
+				"neighbourhood_Conforim",
+				"neighbourhood_ConformityAge"
+			],
+			[
+				"R",
+				"Resident"
+			],
+			[
+				"add",
+				"Address"
+			],
+			[
+				"In",
+				"IntegerField"
+			],
+			[
+				"getWeather",
+				"getWeatherDevice"
+			],
+			[
+				"clear",
+				"clear"
+			],
+			[
+				"GColorl",
+				"GColorBlack"
+			],
+			[
+				"Gco",
+				"GColorClear"
+			],
+			[
+				"handleA",
+				"handleAuthResult"
+			],
+			[
+				"url",
+				"urlshortener"
+			],
+			[
+				"s_m",
+				"s_min_font"
+			],
+			[
+				"s_",
+				"s_weather_font"
+			],
+			[
+				"temp",
+				"temperature_buffer"
+			],
+			[
+				"weat",
+				"weather_layer_buffer"
+			],
+			[
+				"con",
+				"conditions_buffer"
+			],
+			[
+				"tem",
+				"temperature_buffer"
+			],
+			[
+				"KEY_",
+				"KEY_TEMPERATURE"
+			],
+			[
+				"location",
+				"locationSuccess"
+			],
+			[
+				"out",
+				"outbox_sent_callback"
+			],
+			[
+				"iter",
+				"iterator"
+			],
+			[
+				"di",
+				"DictionaryIterator"
+			],
+			[
+				"APP",
+				"APP_LOG_LEVEL_ERROR"
+			],
+			[
+				"de",
+				"default"
+			],
+			[
+				"I",
+				"IntegerField"
+			],
+			[
+				"i",
+				"IntegerField"
+			],
+			[
+				"d",
+				"d"
+			],
+			[
+				"s",
+				"script"
+			],
+			[
+				"select",
+				"selectAll"
+			],
+			[
+				"range",
+				"rangeBand"
+			],
+			[
+				"auto_",
+				"auto_now_add"
+			],
+			[
+				"font-",
+				"font-size"
+			],
+			[
+				"Re",
+				"RequestHandler"
+			],
+			[
+				"data",
+				"dataset"
+			],
+			[
+				"newNu",
+				"newNumber2"
+			],
+			[
+				"fun",
+				"function"
+			],
+			[
+				"selec",
+				"selectAll"
+			],
+			[
+				"bar",
+				"barpadding"
+			],
+			[
+				"inlin",
+				"inline-block"
+			],
+			[
+				"font",
+				"font-size"
+			],
+			[
+				"text",
+				"text-align"
+			],
+			[
+				"tex",
+				"text-align"
+			],
+			[
+				"goals",
+				"goalsAgainst"
+			],
+			[
+				"goali",
+				"goalieStats"
+			],
+			[
+				"get",
+				"getallgoalies"
+			],
+			[
+				"int",
+				"IntegerProperty"
+			],
+			[
+				"getPl",
+				"getPlayerSeason"
+			],
+			[
+				"headi",
+				"headings"
+			],
+			[
+				"stat",
+				"statList"
+			],
+			[
+				"w",
+				"width"
+			],
+			[
+				"games",
+				"gamesPlayed"
+			],
+			[
+				"getP",
+				"getPlayerStats"
+			],
+			[
+				"pla",
+				"playerTeam"
+			],
+			[
+				"b",
+				"BeautifulSoup"
+			],
+			[
+				"pen",
+				"penatlymins"
+			],
+			[
+				"div",
+				"divLoop"
+			]
+		]
+	},
+	"buffers":
+	[
+	],
+	"build_system": "",
+	"build_system_choices":
+	[
+	],
+	"build_varint": "",
+	"command_palette":
+	{
+		"height": 0.0,
+		"last_filter": "",
+		"selected_items":
+		[
+		],
+		"width": 0.0
+	},
+	"console":
+	{
+		"height": 0.0,
+		"history":
+		[
+		]
+	},
+	"distraction_free":
+	{
+		"menu_visible": true,
+		"show_minimap": false,
+		"show_open_files": false,
+		"show_tabs": false,
+		"side_bar_visible": false,
+		"status_bar_visible": false
+	},
+	"expanded_folders":
+	[
+		"/Users/chriscarty/Documents/pebbles/simpleTimeVertical",
+		"/Users/chriscarty/Documents/pebbles/simpleTimeVertical/resources"
+	],
+	"file_history":
+	[
+		"/Users/chriscarty/Documents/pebbles/simpleTimeVertical/appinfo.json",
+		"/Users/chriscarty/Documents/Gits/djangoappraisals/appraisals/admin.py",
+		"/Users/chriscarty/Documents/Gits/djangoappraisals/appraisals/models.py",
+		"/Users/chriscarty/Downloads/cartyGwilymCal-a1cd02e340a8.json",
+		"/Users/chriscarty/Documents/Gits/djangoappraisals/djangoAppraisals/settings.py",
+		"/Users/chriscarty/Documents/Gits/djangoappraisals/djangoAppraisals/models.py",
+		"/Users/chriscarty/Documents/Gits/djangoAppraisals/orders/models.py",
+		"/Users/chriscarty/Documents/pebbles/simpleTimeVertical/src/js/pebble-js-app.js",
+		"/Users/chriscarty/Documents/pebbles/simpleTimeVertical/src/main.c",
+		"/Users/chriscarty/Documents/pebbles/simpleTimeVertical/src/JS/weather.js",
+		"/Users/chriscarty/Documents/pebbles/tutorial1/src/tutorial1.c",
+		"/Users/chriscarty/Documents/Gits/filemakergooglecal/calEvent.py",
+		"/Users/chriscarty/Documents/test.php",
+		"/Users/chriscarty/Documents/pebbles/tutorial1/appinfo.json",
+		"/Users/chriscarty/Documents/pebbles/tutorial1/src/JS/weather.js",
+		"/Users/chriscarty/Documents/Education/Javascript/javascript-and-jquery-jul-2014/c03/js/multiple-objects.js",
+		"/Users/chriscarty/Documents/Gits/test.py",
+		"/Users/chriscarty/Documents/Education/d3/d3.min.js",
+		"/Users/chriscarty/Documents/Education/d3/d3.js",
+		"/Users/chriscarty/Documents/archiveTest.py",
+		"/Users/chriscarty/Documents/d3 Practise/more.html",
+		"/Users/chriscarty/Documents/d3 Practise/d3_test.js",
+		"/Users/chriscarty/Documents/REPDO/Documents/models.py",
+		"/Users/chriscarty/Documents/cartydotcom/choppers.py",
+		"/Users/chriscarty/Documents/d3 Practise/another.html",
+		"/Users/chriscarty/Documents/cartydotcom/cartyDOTcom.py",
+		"/Users/chriscarty/Documents/d3test.html",
+		"/Users/chriscarty/Documents/cartydotcom/templates/hockeystats.html",
+		"/Users/chriscarty/Documents/cartydotcom/templates/playerDetails.html",
+		"/Users/chriscarty/Documents/cartydotcom/templates/hockey.html",
+		"/Users/chriscarty/Documents/cartydotcom/javascript/hockeyTime.js",
+		"/Users/chriscarty/Documents/cartydotcom/stylesheets/hockey.css",
+		"/Users/chriscarty/Downloads/hockeyStats.py",
+		"/Volumes/Git 2.2.1 Mavericks Intel Universal/setup git PATH for non-terminal programs.sh"
+	],
+	"find":
+	{
+		"height": 23.0
+	},
+	"find_in_files":
+	{
+		"height": 0.0,
+		"where_history":
+		[
+		]
+	},
+	"find_state":
+	{
+		"case_sensitive": false,
+		"find_history":
+		[
+			"creationAccount",
+			"creationAccount_id",
+			"creationaccount",
+			"choices",
+			"choice",
+			"datetime",
+			"date",
+			"datetime",
+			"Local",
+			"_Local",
+			"tick",
+			"dothe",
+			"hockeystats",
+			"hockeyst",
+			"player",
+			"th",
+			"td",
+			"table",
+			"2C2A29",
+			"463F3A",
+			"color",
+			"background",
+			"color",
+			"background",
+			"print",
+			"print season",
+			"true",
+			"player tup",
+			"playertup",
+			"goalie",
+			"goaliestats",
+			"makesum",
+			"sum",
+			"choppers",
+			"team",
+			"tram",
+			"choppers",
+			"cache",
+			"stat",
+			"playerStats"
+		],
+		"highlight": true,
+		"in_selection": false,
+		"preserve_case": false,
+		"regex": false,
+		"replace_history":
+		[
+		],
+		"reverse": false,
+		"show_context": true,
+		"use_buffer2": true,
+		"whole_word": false,
+		"wrap": true
+	},
+	"groups":
+	[
+		{
+			"sheets":
+			[
+			]
+		}
+	],
+	"incremental_find":
+	{
+		"height": 23.0
+	},
+	"input":
+	{
+		"height": 31.0
+	},
+	"layout":
+	{
+		"cells":
+		[
+			[
+				0,
+				0,
+				1,
+				1
+			]
+		],
+		"cols":
+		[
+			0.0,
+			1.0
+		],
+		"rows":
+		[
+			0.0,
+			1.0
+		]
+	},
+	"menu_visible": true,
+	"output.find_results":
+	{
+		"height": 0.0
+	},
+	"pinned_build_system": "",
+	"project": "simpleTime.sublime-project",
+	"replace":
+	{
+		"height": 42.0
+	},
+	"save_all_on_build": true,
+	"select_file":
+	{
+		"height": 0.0,
+		"last_filter": "",
+		"selected_items":
+		[
+		],
+		"width": 0.0
+	},
+	"select_project":
+	{
+		"height": 0.0,
+		"last_filter": "",
+		"selected_items":
+		[
+		],
+		"width": 0.0
+	},
+	"select_symbol":
+	{
+		"height": 0.0,
+		"last_filter": "",
+		"selected_items":
+		[
+		],
+		"width": 0.0
+	},
+	"selected_group": 0,
+	"settings":
+	{
+	},
+	"show_minimap": true,
+	"show_open_files": false,
+	"show_tabs": true,
+	"side_bar_visible": true,
+	"side_bar_width": 186.0,
+	"status_bar_visible": true,
+	"template_settings":
+	{
+	}
+}
