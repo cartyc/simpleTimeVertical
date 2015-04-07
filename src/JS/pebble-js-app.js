@@ -61,42 +61,42 @@ function getWeatherDevice(pos){
 //Attempt to the the Weather Data//
 //           Via Hard Code       //
 ///////////////////////////////////
-function getWeatherLocal(){
+// function getWeatherLocal(){
   
-  //We will request the weather here
-  var url = "http://api.openweathermap.org/data/2.5/weather?lat=45.41&lon=-75.7";
-  console.log("Before request");
-  console.log(url);
-  //send request
+//   //We will request the weather here
+//   var url = "http://api.openweathermap.org/data/2.5/weather?lat=45.41&lon=-75.7";
+//   console.log("Before request");
+//   console.log(url);
+//   //send request
 
-     xhrRequest(url, 'GET', 
-            function(responseText){
-              var json = JSON.parse(responseText);
+//      xhrRequest(url, 'GET', 
+//             function(responseText){
+//               var json = JSON.parse(responseText);
               
-              //Convert Kelvins
-              var temperature = Math.round(json.main.temp - 273.15);
-              console.log("Temperature is " + temperature);
+//               //Convert Kelvins
+//               var temperature = Math.round(json.main.temp - 273.15);
+//               console.log("Temperature is " + temperature);
               
-              //conditions
-              var conditions = json.weather[0].main;
-              console.log("Conditions are " + conditions);
+//               //conditions
+//               var conditions = json.weather[0].main;
+//               console.log("Conditions are " + conditions);
               
-              var dictionary = {
-                'KEY_TEMPERATURE': temperature,
-                'KEY_CONDITIONS': conditions
-              };
-              //Send to pebble
-              Pebble.sendAppMessage(dictionary,
-                     function(e){
-                       console.log("Weather info sent to Pebble Successfully");
-                     },
-                     function(e){
-                       console.log("Error sending weather info to Pebble!");
-                     });
-            });
+//               var dictionary = {
+//                 'KEY_TEMPERATURE': temperature,
+//                 'KEY_CONDITIONS': conditions
+//               };
+//               //Send to pebble
+//               Pebble.sendAppMessage(dictionary,
+//                      function(e){
+//                        console.log("Weather info sent to Pebble Successfully");
+//                      },
+//                      function(e){
+//                        console.log("Error sending weather info to Pebble!");
+//                      });
+//             });
   
 
-}
+// }
 
 
 /////////////////////////////////
@@ -105,10 +105,9 @@ function getWeatherLocal(){
 //                             //
 /////////////////////////////////
 function locationError(err){
-  console.log("Error requesting location via api!");
-  console.log("Check manually");
-  //If there was an error just get the data the good old fashioned way
-  getWeatherLocal();
+  console.log("Error requesting location via api!");  
+
+
 }
 
 

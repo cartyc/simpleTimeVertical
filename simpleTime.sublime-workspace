@@ -299,6 +299,17 @@
 	},
 	"buffers":
 	[
+		{
+			"contents": "",
+			"file": "/Users/chriscarty/Documents/Education/yql/yahoo.html",
+			"file_size": -1,
+			"file_write_time": -1,
+			"settings":
+			{
+				"buffer_size": 0,
+				"line_ending": "Unix"
+			}
+		}
 	],
 	"build_system": "",
 	"build_system_choices":
@@ -307,12 +318,24 @@
 	"build_varint": "",
 	"command_palette":
 	{
-		"height": 0.0,
-		"last_filter": "",
+		"height": 392.0,
+		"last_filter": "in",
 		"selected_items":
 		[
+			[
+				"in",
+				"Pebble: Install"
+			],
+			[
+				"bu",
+				"Build With: Pebble"
+			],
+			[
+				"build",
+				"Build With: Pebble"
+			]
 		],
-		"width": 0.0
+		"width": 449.0
 	},
 	"console":
 	{
@@ -333,10 +356,13 @@
 	"expanded_folders":
 	[
 		"/Users/chriscarty/Documents/pebbles/simpleTimeVertical",
-		"/Users/chriscarty/Documents/pebbles/simpleTimeVertical/resources"
+		"/Users/chriscarty/Documents/pebbles/simpleTimeVertical/src",
+		"/Users/chriscarty/Documents/pebbles/simpleTimeVertical/src/js"
 	],
 	"file_history":
 	[
+		"/Users/chriscarty/Documents/pebbles/simpleTimeVertical/src/js/pebble-js-app.js",
+		"/Users/chriscarty/Documents/pebbles/simpleTimeVertical/src/main.c",
 		"/Users/chriscarty/Documents/pebbles/simpleTimeVertical/appinfo.json",
 		"/Users/chriscarty/Documents/Gits/djangoappraisals/appraisals/admin.py",
 		"/Users/chriscarty/Documents/Gits/djangoappraisals/appraisals/models.py",
@@ -344,8 +370,6 @@
 		"/Users/chriscarty/Documents/Gits/djangoappraisals/djangoAppraisals/settings.py",
 		"/Users/chriscarty/Documents/Gits/djangoappraisals/djangoAppraisals/models.py",
 		"/Users/chriscarty/Documents/Gits/djangoAppraisals/orders/models.py",
-		"/Users/chriscarty/Documents/pebbles/simpleTimeVertical/src/js/pebble-js-app.js",
-		"/Users/chriscarty/Documents/pebbles/simpleTimeVertical/src/main.c",
 		"/Users/chriscarty/Documents/pebbles/simpleTimeVertical/src/JS/weather.js",
 		"/Users/chriscarty/Documents/pebbles/tutorial1/src/tutorial1.c",
 		"/Users/chriscarty/Documents/Gits/filemakergooglecal/calEvent.py",
@@ -445,8 +469,37 @@
 	"groups":
 	[
 		{
+			"selected": 0,
 			"sheets":
 			[
+				{
+					"buffer": 0,
+					"file": "/Users/chriscarty/Documents/Education/yql/yahoo.html",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 0,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								0,
+								0
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/HTML/HTML.tmLanguage"
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 0,
+					"type": "text"
+				}
 			]
 		}
 	],
@@ -481,6 +534,10 @@
 		]
 	},
 	"menu_visible": true,
+	"output.exec":
+	{
+		"height": 100.0
+	},
 	"output.find_results":
 	{
 		"height": 0.0
