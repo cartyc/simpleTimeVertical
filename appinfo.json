@@ -41,5 +41,6 @@
 	]
   },
   "capabilities":
-  	["location"]
+  	["location"],
+  	["configurable"]
 }
