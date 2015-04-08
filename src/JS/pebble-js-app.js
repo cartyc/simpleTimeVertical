@@ -34,8 +34,9 @@ function getWeatherDevice(pos){
               var json = JSON.parse(responseText);
               
               //Convert Kelvins
-              var celcius = Math.round(json.main.temp - 273.15);
-              var farenheight = )celcius * 1.8000) + 32.00;
+              var kelvins = Math.round(json.main.temp);
+              var celcius = kelvins - 273.15;
+              var farenheight = (celcius * 1.8000) + 32.00;
 
               console.log("Temperature is " + celcius);
               
