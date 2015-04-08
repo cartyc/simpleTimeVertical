@@ -300,13 +300,18 @@
 	"buffers":
 	[
 		{
-			"contents": "",
-			"file": "/Users/chriscarty/Documents/Education/yql/yahoo.html",
-			"file_size": -1,
-			"file_write_time": -1,
+			"file": "appinfo.json",
 			"settings":
 			{
-				"buffer_size": 0,
+				"buffer_size": 875,
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"file": "src/js/pebble-js-app.js",
+			"settings":
+			{
+				"buffer_size": 3416,
 				"line_ending": "Unix"
 			}
 		}
@@ -361,6 +366,7 @@
 	],
 	"file_history":
 	[
+		"/Users/chriscarty/Documents/Education/yql/yahoo.html",
 		"/Users/chriscarty/Documents/pebbles/simpleTimeVertical/src/js/pebble-js-app.js",
 		"/Users/chriscarty/Documents/pebbles/simpleTimeVertical/src/main.c",
 		"/Users/chriscarty/Documents/pebbles/simpleTimeVertical/appinfo.json",
@@ -474,30 +480,60 @@
 			[
 				{
 					"buffer": 0,
-					"file": "/Users/chriscarty/Documents/Education/yql/yahoo.html",
+					"file": "appinfo.json",
 					"semi_transient": false,
 					"settings":
 					{
-						"buffer_size": 0,
+						"buffer_size": 875,
 						"regions":
 						{
 						},
 						"selection":
 						[
 							[
-								0,
-								0
+								867,
+								867
 							]
 						],
 						"settings":
 						{
-							"syntax": "Packages/HTML/HTML.tmLanguage"
+							"syntax": "Packages/JavaScript/JSON.tmLanguage"
 						},
 						"translation.x": 0.0,
 						"translation.y": 0.0,
 						"zoom_level": 1.0
 					},
 					"stack_index": 0,
+					"type": "text"
+				},
+				{
+					"buffer": 1,
+					"file": "src/js/pebble-js-app.js",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 3416,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								1083,
+								1083
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/JavaScript/JavaScript.tmLanguage",
+							"tab_size": 2,
+							"translate_tabs_to_spaces": true
+						},
+						"translation.x": 0.0,
+						"translation.y": 230.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 1,
 					"type": "text"
 				}
 			]
