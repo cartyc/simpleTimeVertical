@@ -206,9 +206,9 @@ static void inbox_received_callback(DictionaryIterator *iterator, void *context)
 
     APP_LOG(APP_LOG_LEVEL_ERROR, "Temp Key %d", KEY_TEMPERATURE);
     
-
+	bool is_connected = bluetooth_connection_service_peek();
     //If buffer doesn't contain anything usefull or if there is no
-	if ( temperature_buffer != 0 || bool bluetooth_connection_service_peek(void) ){
+	if ( temperature_buffer != 0 || is_connected){
 		text_layer_set_background_color(s_weather,GColorBlack);
 		text_layer_set_text_color(s_weather, GColorClear);
 	} else {
