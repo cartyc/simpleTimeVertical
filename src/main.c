@@ -154,6 +154,7 @@ static void main_window_unload(Window *window){
 	text_layer_destroy(s_minute);
 	text_layer_destroy(s_hour);
 	text_layer_destroy(s_weather);
+	text_layer_destroy(s_Date)
 
 	fonts_unload_custom_font(s_weather_font);
 	fonts_unload_custom_font(s_hour_font);
@@ -204,9 +205,9 @@ static void inbox_received_callback(DictionaryIterator *iterator, void *context)
           break;
     }
 
-    APP_LOG(APP_LOG_LEVEL_ERROR, "Temp Key %d", KEY_TEMPERATURE);
-    
+	//get Bluetooth Status    
 	bool is_connected = bluetooth_connection_service_peek();
+    
     //If buffer doesn't contain anything usefull or if there is no
 	if ( temperature_buffer != 0 || is_connected){
 		text_layer_set_background_color(s_weather,GColorBlack);
