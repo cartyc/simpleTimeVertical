@@ -38,14 +38,14 @@ function getWeatherDevice(pos){
               celcius = kelvins - 273.15;
               farenheight = (celcius * 1.8000) + 32.00;
 
-              console.log("Temperature is " + kelvins);
+              console.log("Temperature is " + farenheight);
               
               //conditions
               var conditions = json.weather[0].main;
               console.log("Conditions are " + conditions);
               
               var dictionary = {
-                'KEY_TEMPERATURE': kelvins,
+                'KEY_TEMPERATURE': farenheight,
                 'KEY_CONDITIONS': conditions,
 
 
