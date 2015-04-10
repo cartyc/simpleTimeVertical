@@ -48,6 +48,7 @@ static void update_time(){
 	//Display this on the textlayer
 	text_layer_set_text(s_minute, minBuffer);
 	text_layer_set_text(s_hour, hourBuffer);
+
 }
 
 /////////////////////////
@@ -175,6 +176,7 @@ static void inbox_received_callback(DictionaryIterator *iterator, void *context)
     switch(t->key){
       case KEY_TEMPERATURE:
         snprintf(temperature_buffer, sizeof(temperature_buffer), "%d°C", (int)t->value->int32);
+        APP_LOG(APP_LOG_LEVEL_ERROR, "Key %d!", (int)t->key);
         break;
       case KEY_CONDITIONS:
         snprintf(conditions_buffer, sizeof(conditions_buffer), "%s", t->value->cstring);
@@ -183,6 +185,16 @@ static void inbox_received_callback(DictionaryIterator *iterator, void *context)
         APP_LOG(APP_LOG_LEVEL_ERROR, "Key %d not recognized!", (int)t->key);
           break;
     }
+
+
+	if ( KEY_TEMPERATURE != 0){
+		text_layer_set_background_color(s_weather,GColorBlack);
+		text_layer_set_text_color(s_weather, GColorClear);
+	} else {
+		text_layer_set_background_color(s_weather, GColorClear);
+		text_layer_set_background_color(s_weather, GColorBlack);
+	}
+
     snprintf(weather_layer_buffer, sizeof(weather_layer_buffer), "%s %s", temperature_buffer, conditions_buffer);
     text_layer_set_text(s_weather, weather_layer_buffer);
     t = dict_read_next(iterator);
