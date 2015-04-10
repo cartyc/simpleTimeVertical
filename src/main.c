@@ -110,7 +110,7 @@ static void main_window_load(Window *window){
 	////////////////////////
 	//Create Minute  Layer//
 	////////////////////////
-	s_minute = text_layer_create(GRect(0, 75, 144, 60));
+	s_minute = text_layer_create(GRect(0, 90, 144, 60));
 	//Set Layer design
 	setLayer(s_minute, "black", "clear", s_min_font);
 	//Make things like a watch
@@ -122,7 +122,7 @@ static void main_window_load(Window *window){
 	/////////////////////
 	//Create Hour layer//
 	/////////////////////
-	s_hour = text_layer_create(GRect(0,15,144,70));
+	s_hour = text_layer_create(GRect(0,20,144,70));
 	//Set the Layer parameters
 	setLayer(s_hour, "black", "clear", s_hour_font);
 	//Set minute layer parameters
