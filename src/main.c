@@ -40,9 +40,6 @@ static void update_time(){
 	
 	//Write the date
 	strftime(dateBuffer, sizeof(dateBuffer), "%b %d", tick_time);
-	// strftime(date_text, sizeof(date_text), "%A\n%B %e", tick_time);
-
-	// snprintf(weather_layer_buffer, sizeof(weather_layer_buffer), "%s %s", temperature_buffer, conditions_buffer);
 
 	//Write the current hours and minutes!
 	if (clock_is_24h_style() == true){
