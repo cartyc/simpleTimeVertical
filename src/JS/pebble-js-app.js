@@ -45,7 +45,7 @@ function getWeatherDevice(pos){
               console.log("Conditions are " + conditions);
               
               var dictionary = {
-                'KEY_TEMPERATURE': kelvins,
+                'KEY_TEMPERATURE': celcius,
                 'KEY_CONDITIONS': conditions
               };
               //Send to pebble
