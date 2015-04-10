@@ -32,11 +32,11 @@ function getWeatherDevice(pos){
      xhrRequest(url, 'GET', 
             function(responseText){
               var json = JSON.parse(responseText);
-              
+              var kelvins, celcius, farenheight;
               //Convert Kelvins
-              var kelvins = Math.round(json.main.temp);
-              var celcius = kelvins - 273.15;
-              var farenheight = (celcius * 1.8000) + 32.00;
+              kelvins = Math.round(json.main.temp);
+              celcius = kelvins - 273.15;
+              farenheight = (celcius * 1.8000) + 32.00;
 
               console.log("Temperature is " + celcius);
               
