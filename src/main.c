@@ -205,12 +205,14 @@ static void inbox_received_callback(DictionaryIterator *iterator, void *context)
     }
 
     APP_LOG(APP_LOG_LEVEL_ERROR, "Temp Key %d", KEY_TEMPERATURE);
-	if ( temperature_buffer != 0){
+    
+
+    //If buffer doesn't contain anything usefull or if there is no
+	if ( temperature_buffer != 0 || bool bluetooth_connection_service_peek(void) ){
 		text_layer_set_background_color(s_weather,GColorBlack);
 		text_layer_set_text_color(s_weather, GColorClear);
 	} else {
 		text_layer_set_background_color(s_weather, GColorClear);
-		text_layer_set_background_color(s_weather, GColorBlack);
 	}
 
     snprintf(weather_layer_buffer, sizeof(weather_layer_buffer), "%s %s", temperature_buffer, conditions_buffer);
