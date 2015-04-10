@@ -193,12 +193,8 @@ static void inbox_received_callback(DictionaryIterator *iterator, void *context)
   while(t != NULL){
     switch(t->key){
       case KEY_TEMPERATURE:
-<<<<<<< HEAD
+
         snprintf(temperature_buffer, sizeof(temperature_buffer), "%d °K", (int)t->value->int32);
-=======
-        snprintf(temperature_buffer, sizeof(temperature_buffer), "%d°C", (int)t->value->int32);
-        APP_LOG(APP_LOG_LEVEL_ERROR, "Temp %d", (int)t->value->int32);
->>>>>>> master
         break;
       case KEY_CONDITIONS:
         snprintf(conditions_buffer, sizeof(conditions_buffer), "%s", t->value->cstring);
