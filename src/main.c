@@ -110,7 +110,7 @@ static void main_window_load(Window *window){
 	////////////////////////
 	//Create Minute  Layer//
 	////////////////////////
-	s_minute = text_layer_create(GRect(0, 90, 144, 60));
+	s_minute = text_layer_create(GRect(0, 80, 144, 60));
 	//Set Layer design
 	setLayer(s_minute, "black", "clear", s_min_font);
 	//Make things like a watch
