@@ -10,6 +10,8 @@
 
 //Set pointer for main window
 static Window *s_main_window;
+//Date Text Layer
+static TextLayer *s_Date;
 //Time Text Layer
 static TextLayer *s_minute;
 //Text Layer
@@ -31,10 +33,17 @@ static void update_time(){
 	time_t temp = time(NULL);
 	struct tm *tick_time = localtime(&temp);
 
+
+	static char dateBuffer[] = "%M %D %Y";;
 	//Create a time buffer
 	static char hourBuffer[] = "00";
 	static char minBuffer[] = "00";
 	
+	//Write the date
+	snprintf(dateBuffer, sizeof(date), "%s", date);
+
+	// snprintf(weather_layer_buffer, sizeof(weather_layer_buffer), "%s %s", temperature_buffer, conditions_buffer);
+
 	//Write the current hours and minutes!
 	if (clock_is_24h_style() == true){
 		//Use 24 hours format
@@ -88,6 +97,14 @@ static void main_window_load(Window *window){
 	s_min_font = fonts_load_custom_font(resource_get_handle(RESOURCE_ID_FONT_LATO_52));
 	s_weather_font = fonts_load_custom_font(resource_get_handle(RESOURCE_ID_FONT_LATO_20));
 
+	////////////////////////
+	//Create Date    Layer//
+	////////////////////////
+	s_Date = text_layer_create(GRect(0,0,144,60));
+	setLayer(s_Date, "clear", "black", s_weather_font);
+	text_layer_set_text_alignment(s_Date, GTextAlignmentCenter);
+	//Add it!
+	layer_add_child(window_get_root_layer(window), text_layer_get_layer(s_Date));
 
 	////////////////////////
 	//Create Minute  Layer//
