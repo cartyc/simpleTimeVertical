@@ -38,7 +38,7 @@ function getWeatherDevice(pos){
               var celcius = kelvins - 273.15;
               var farenheight = (celcius * 1.8000) + 32.00;
 
-              console.log("Temperature is " + celcius);
+              console.log("Temperature is " + kelvins);
               
               //conditions
               var conditions = json.weather[0].main;
@@ -46,7 +46,7 @@ function getWeatherDevice(pos){
               
               var dictionary = {
                 'KEY_TEMPERATURE': kelvins,
-                'KEY_CONDITIONS': conditions
+                'KEY_CONDITIONS': conditions,
               };
               //Send to pebble
               Pebble.sendAppMessage(dictionary,
