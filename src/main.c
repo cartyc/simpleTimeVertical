@@ -117,7 +117,7 @@ static void main_window_load(Window *window){
 	//Weather Layer//
 	/////////////////
 	s_weather = text_layer_create(GRect(0,140,144,40));
-	setLayer(s_weather, "clear", "black", s_weather_font);
+	setLayer(s_weather, "black", "clear", s_weather_font);
 	text_layer_set_text_alignment(s_weather, GTextAlignmentCenter);
 	text_layer_set_text(s_weather, "");
 	//Add Weather Layer
@@ -176,7 +176,7 @@ static void inbox_received_callback(DictionaryIterator *iterator, void *context)
     switch(t->key){
       case KEY_TEMPERATURE:
         snprintf(temperature_buffer, sizeof(temperature_buffer), "%d°C", (int)t->value->int32);
-        APP_LOG(APP_LOG_LEVEL_ERROR, "Key %d!", (int)t->key);
+        APP_LOG(APP_LOG_LEVEL_ERROR, "Temp %d", (int)t->value->int32);
         break;
       case KEY_CONDITIONS:
         snprintf(conditions_buffer, sizeof(conditions_buffer), "%s", t->value->cstring);
@@ -186,8 +186,8 @@ static void inbox_received_callback(DictionaryIterator *iterator, void *context)
           break;
     }
 
-
-	if ( KEY_TEMPERATURE != 0){
+    APP_LOG(APP_LOG_LEVEL_ERROR, "Temp Key %d", KEY_TEMPERATURE);
+	if ( temperature_buffer != 0){
 		text_layer_set_background_color(s_weather,GColorBlack);
 		text_layer_set_text_color(s_weather, GColorClear);
 	} else {
