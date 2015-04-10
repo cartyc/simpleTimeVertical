@@ -10,6 +10,9 @@
 
 //Set pointer for main window
 static Window *s_main_window;
+//Date Text Layer
+char dateBuffer[32];
+static TextLayer *s_Date;
 //Time Text Layer
 static TextLayer *s_minute;
 //Text Layer
@@ -28,13 +31,16 @@ static GFont s_weather_font;
 ////////////////////////
 static void update_time(){
 	//Set time structure
-	time_t temp = time(NULL);
+	time_t temp = time(0);
 	struct tm *tick_time = localtime(&temp);
 
 	//Create a time buffer
 	static char hourBuffer[] = "00";
 	static char minBuffer[] = "00";
 	
+	//Write the date
+	strftime(dateBuffer, sizeof(dateBuffer), "%b %d", tick_time);
+
 	//Write the current hours and minutes!
 	if (clock_is_24h_style() == true){
 		//Use 24 hours format
@@ -48,6 +54,8 @@ static void update_time(){
 	//Display this on the textlayer
 	text_layer_set_text(s_minute, minBuffer);
 	text_layer_set_text(s_hour, hourBuffer);
+	text_layer_set_text(s_Date, dateBuffer);
+
 }
 
 /////////////////////////
@@ -87,11 +95,19 @@ static void main_window_load(Window *window){
 	s_min_font = fonts_load_custom_font(resource_get_handle(RESOURCE_ID_FONT_LATO_52));
 	s_weather_font = fonts_load_custom_font(resource_get_handle(RESOURCE_ID_FONT_LATO_20));
 
+	////////////////////////
+	//Create Date    Layer//
+	////////////////////////
+	s_Date = text_layer_create(GRect(0,0,144,30));
+	setLayer(s_Date, "black", "clear", s_weather_font);
+	text_layer_set_text_alignment(s_Date, GTextAlignmentCenter);
+	//Add it!
+	layer_add_child(window_get_root_layer(window), text_layer_get_layer(s_Date));
 
 	////////////////////////
 	//Create Minute  Layer//
 	////////////////////////
-	s_minute = text_layer_create(GRect(0, 75, 144, 60));
+	s_minute = text_layer_create(GRect(0, 80, 144, 60));
 	//Set Layer design
 	setLayer(s_minute, "black", "clear", s_min_font);
 	//Make things like a watch
@@ -103,7 +119,7 @@ static void main_window_load(Window *window){
 	/////////////////////
 	//Create Hour layer//
 	/////////////////////
-	s_hour = text_layer_create(GRect(0,10,144,70));
+	s_hour = text_layer_create(GRect(0,20,144,70));
 	//Set the Layer parameters
 	setLayer(s_hour, "black", "clear", s_hour_font);
 	//Set minute layer parameters
@@ -116,7 +132,7 @@ static void main_window_load(Window *window){
 	//Weather Layer//
 	/////////////////
 	s_weather = text_layer_create(GRect(0,140,144,40));
-	setLayer(s_weather, "clear", "black", s_weather_font);
+	setLayer(s_weather, "black", "clear", s_weather_font);
 	text_layer_set_text_alignment(s_weather, GTextAlignmentCenter);
 	text_layer_set_text(s_weather, "");
 	//Add Weather Layer
@@ -126,7 +142,10 @@ static void main_window_load(Window *window){
 	/////////////////////
 	//Run a time update//
 	/////////////////////
-	update_time();
+    time_t t = time(0);
+    struct tm *time = localtime(&t);
+
+	update_time(time);
 }
 
 static void main_window_unload(Window *window){
@@ -144,7 +163,7 @@ static void main_window_unload(Window *window){
 
 //tick timer
 static void tick_handler(struct tm *tick_time, TimeUnits units_changed){
-	update_time();
+	update_time(tick_time);
 
 	//set Weather Every 15 mins
 	if(tick_time->tm_min % 15==0){
@@ -174,7 +193,12 @@ static void inbox_received_callback(DictionaryIterator *iterator, void *context)
   while(t != NULL){
     switch(t->key){
       case KEY_TEMPERATURE:
+<<<<<<< HEAD
         snprintf(temperature_buffer, sizeof(temperature_buffer), "%d °K", (int)t->value->int32);
+=======
+        snprintf(temperature_buffer, sizeof(temperature_buffer), "%d°C", (int)t->value->int32);
+        APP_LOG(APP_LOG_LEVEL_ERROR, "Temp %d", (int)t->value->int32);
+>>>>>>> master
         break;
       case KEY_CONDITIONS:
         snprintf(conditions_buffer, sizeof(conditions_buffer), "%s", t->value->cstring);
@@ -183,6 +207,16 @@ static void inbox_received_callback(DictionaryIterator *iterator, void *context)
         APP_LOG(APP_LOG_LEVEL_ERROR, "Key %d not recognized!", (int)t->key);
           break;
     }
+
+    APP_LOG(APP_LOG_LEVEL_ERROR, "Temp Key %d", KEY_TEMPERATURE);
+	if ( temperature_buffer != 0){
+		text_layer_set_background_color(s_weather,GColorBlack);
+		text_layer_set_text_color(s_weather, GColorClear);
+	} else {
+		text_layer_set_background_color(s_weather, GColorClear);
+		text_layer_set_background_color(s_weather, GColorBlack);
+	}
+
     snprintf(weather_layer_buffer, sizeof(weather_layer_buffer), "%s %s", temperature_buffer, conditions_buffer);
     text_layer_set_text(s_weather, weather_layer_buffer);
     t = dict_read_next(iterator);

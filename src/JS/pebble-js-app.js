@@ -32,11 +32,11 @@ function getWeatherDevice(pos){
      xhrRequest(url, 'GET', 
             function(responseText){
               var json = JSON.parse(responseText);
-              
+              var kelvins, celcius, farenheight;
               //Convert Kelvins
-              var kelvins = Math.round(json.main.temp);
-              var celcius = kelvins - 273.15;
-              var farenheight = (celcius * 1.8000) + 32.00;
+              kelvins = Math.round(json.main.temp);
+              celcius = kelvins - 273.15;
+              farenheight = (celcius * 1.8000) + 32.00;
 
               console.log("Temperature is " + kelvins);
               
@@ -45,8 +45,13 @@ function getWeatherDevice(pos){
               console.log("Conditions are " + conditions);
               
               var dictionary = {
+<<<<<<< HEAD
                 'KEY_TEMPERATURE': kelvins,
                 'KEY_CONDITIONS': conditions,
+=======
+                'KEY_TEMPERATURE': celcius,
+                'KEY_CONDITIONS': conditions
+>>>>>>> master
               };
               //Send to pebble
               Pebble.sendAppMessage(dictionary,
