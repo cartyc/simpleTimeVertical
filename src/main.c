@@ -154,7 +154,7 @@ static void main_window_unload(Window *window){
 	text_layer_destroy(s_minute);
 	text_layer_destroy(s_hour);
 	text_layer_destroy(s_weather);
-	text_layer_destroy(s_Date)
+	text_layer_destroy(s_Date);
 
 	fonts_unload_custom_font(s_weather_font);
 	fonts_unload_custom_font(s_hour_font);
@@ -209,7 +209,7 @@ static void inbox_received_callback(DictionaryIterator *iterator, void *context)
 	bool is_connected = bluetooth_connection_service_peek();
     
     //If buffer doesn't contain anything usefull or if there is no
-	if ( temperature_buffer != 0 || is_connected){
+	if ( is_connected || temperature_buffer != 0){
 		text_layer_set_background_color(s_weather,GColorBlack);
 		text_layer_set_text_color(s_weather, GColorClear);
 	} else {
