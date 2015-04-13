@@ -205,11 +205,9 @@ static void inbox_received_callback(DictionaryIterator *iterator, void *context)
           break;
     }
 
-	//get Bluetooth Status    
-	bool is_connected = bluetooth_connection_service_peek();
     
     //If buffer doesn't contain anything usefull or if there is no
-	if ( is_connected || temperature_buffer != 0){
+	if ( temperature_buffer != 0){
 		text_layer_set_background_color(s_weather,GColorBlack);
 		text_layer_set_text_color(s_weather, GColorClear);
 	} else {
