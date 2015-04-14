@@ -324,10 +324,18 @@
 			}
 		},
 		{
+			"file": "src/main.c",
+			"settings":
+			{
+				"buffer_size": 7758,
+				"line_ending": "Unix"
+			}
+		},
+		{
 			"file": "appinfo.json",
 			"settings":
 			{
-				"buffer_size": 851,
+				"buffer_size": 855,
 				"line_ending": "Unix"
 			}
 		},
@@ -385,11 +393,13 @@
 	"expanded_folders":
 	[
 		"/Users/chriscarty/Documents/pebbles/simpleTimeVertical",
+		"/Users/chriscarty/Documents/pebbles/simpleTimeVertical/resources",
 		"/Users/chriscarty/Documents/pebbles/simpleTimeVertical/src",
 		"/Users/chriscarty/Documents/pebbles/simpleTimeVertical/src/js"
 	],
 	"file_history":
 	[
+		"/Users/chriscarty/Documents/pebbles/simpleTimeVertical/pebble-screenshot_2015-04-11_12-16-30.png",
 		"/Users/chriscarty/Documents/Education/Udacity/introtoRDB/fullstack/vagrant/forum/forum.py",
 		"/Users/chriscarty/Documents/pebbles/simpleTimeVertical/src/main.c",
 		"/Users/chriscarty/Documents/pebbles/simpleTimeVertical/src/js/pebble-js-app.js",
@@ -516,8 +526,8 @@
 						"selection":
 						[
 							[
-								1521,
-								1521
+								1363,
+								1363
 							]
 						],
 						"settings":
@@ -527,7 +537,7 @@
 							"translate_tabs_to_spaces": true
 						},
 						"translation.x": 0.0,
-						"translation.y": 0.0,
+						"translation.y": 211.0,
 						"zoom_level": 1.0
 					},
 					"stack_index": 0,
@@ -535,19 +545,48 @@
 				},
 				{
 					"buffer": 1,
-					"file": "appinfo.json",
+					"file": "src/main.c",
 					"semi_transient": false,
 					"settings":
 					{
-						"buffer_size": 851,
+						"buffer_size": 7758,
 						"regions":
 						{
 						},
 						"selection":
 						[
 							[
-								848,
-								848
+								0,
+								0
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/C++/C++.tmLanguage",
+							"translate_tabs_to_spaces": false
+						},
+						"translation.x": 0.0,
+						"translation.y": 195.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 2,
+					"type": "text"
+				},
+				{
+					"buffer": 2,
+					"file": "appinfo.json",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 855,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								255,
+								255
 							]
 						],
 						"settings":
@@ -562,7 +601,7 @@
 					"type": "text"
 				},
 				{
-					"buffer": 2,
+					"buffer": 3,
 					"file": ".gitignore",
 					"semi_transient": false,
 					"settings":
@@ -586,7 +625,7 @@
 						"translation.y": 0.0,
 						"zoom_level": 1.0
 					},
-					"stack_index": 2,
+					"stack_index": 3,
 					"type": "text"
 				}
 			]
