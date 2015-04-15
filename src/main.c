@@ -251,7 +251,7 @@ static void init(){
 	tick_timer_service_subscribe(MINUTE_UNIT, tick_handler);
 
 	// //So that time displays when face is loaded
-	// update_time();
+	update_time();
 
 	//Register the calbacks
 	app_message_register_inbox_received(inbox_received_callback);
