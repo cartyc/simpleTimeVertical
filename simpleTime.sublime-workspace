@@ -4,6 +4,10 @@
 		"selected_items":
 		[
 			[
+				"restau",
+				"restaurant"
+			],
+			[
 				"date",
 				"dateBuffer"
 			],
@@ -327,7 +331,7 @@
 			"file": "src/main.c",
 			"settings":
 			{
-				"buffer_size": 7758,
+				"buffer_size": 7755,
 				"line_ending": "Unix"
 			}
 		},
@@ -399,6 +403,7 @@
 	],
 	"file_history":
 	[
+		"/Users/chriscarty/Documents/Education/Udacity/FSFoundations/database_setup.py",
 		"/Users/chriscarty/Documents/pebbles/simpleTimeVertical/pebble-screenshot_2015-04-11_12-16-30.png",
 		"/Users/chriscarty/Documents/Education/Udacity/introtoRDB/fullstack/vagrant/forum/forum.py",
 		"/Users/chriscarty/Documents/pebbles/simpleTimeVertical/src/main.c",
@@ -510,7 +515,7 @@
 	"groups":
 	[
 		{
-			"selected": 0,
+			"selected": 1,
 			"sheets":
 			[
 				{
@@ -540,7 +545,7 @@
 						"translation.y": 211.0,
 						"zoom_level": 1.0
 					},
-					"stack_index": 0,
+					"stack_index": 1,
 					"type": "text"
 				},
 				{
@@ -549,15 +554,15 @@
 					"semi_transient": false,
 					"settings":
 					{
-						"buffer_size": 7758,
+						"buffer_size": 7755,
 						"regions":
 						{
 						},
 						"selection":
 						[
 							[
-								0,
-								0
+								6937,
+								6937
 							]
 						],
 						"settings":
@@ -566,10 +571,10 @@
 							"translate_tabs_to_spaces": false
 						},
 						"translation.x": 0.0,
-						"translation.y": 195.0,
+						"translation.y": 3453.0,
 						"zoom_level": 1.0
 					},
-					"stack_index": 2,
+					"stack_index": 0,
 					"type": "text"
 				},
 				{
@@ -597,7 +602,7 @@
 						"translation.y": 0.0,
 						"zoom_level": 1.0
 					},
-					"stack_index": 1,
+					"stack_index": 2,
 					"type": "text"
 				},
 				{
